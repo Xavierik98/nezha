@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* Définition des couleurs primaires et secondaires */
+:root {
+    --primary-color: #dde6ef; /* Bleu */
+    --secondary-color: orange; /* Gris */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    background-color: #379bb4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color); /* Utilisation de la couleur primaire pour le logo */
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 20px;
+    margin: 7px 14px;
+}
+.menu-item a,.logo, .btn{
+    text-decoration: none;
+}
+
+.menu-link {
+    color: var(--primary-color); /* Utilisation de la couleur primaire pour les liens du menu */
+    position: relative;
+    text-decoration: none;
+}
+
+ul li .menu-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color); /* Utilisation de la couleur secondaire pour la ligne */
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.5s;
+}
+.btn.menu-link::after {
+    display: none; /* Ne pas afficher la ligne après le bouton avec la classe 'menu-link' */
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.menu-link:hover {
+    color: var(--secondary-color); /* Changement de couleur du lien lorsqu'il est survolé */
+}
+/* Styles pour le bouton */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+    border-radius: 30px;
+}
+
+/* Style par défaut */
+.btn {
+    background-color: var(--secondary-color); /* Utiliser la couleur secondaire par défaut */
+    color: white;
+}
+
+/* Style lorsque le bouton est survolé */
+.btn:hover {
+    background-color: var(--primary-color); /* Utiliser la couleur primaire lorsqu'il est survolé */
+}
+
+
+/* Style lorsque le bouton est enfoncé */
+.btn:active {
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+  
+/* Header */
+.header{
+    margin-bottom: 50px;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    flex: 1;
+    padding: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.bg{
+    background: url();
+}
+/* Cards */
+
